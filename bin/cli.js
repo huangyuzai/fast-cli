@@ -12,6 +12,7 @@ program
     .description('create a new project')
     // -f or --force 为强制创建，如果创建的目录存在则直接覆盖
     .option('-f, --force', 'overwrite target directory if it exist')
+    .option('-t, --template', 'select a template')
     .action((name, options) => {
         // 在 create.js 中执行创建任务
         require('../lib/create.js')(name, options)
